@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "Thanks for registering"
       session[:user_id] = @user.id
-      redirect_to '/topics'
+      redirect_to '/categories'
     else
       render :new
     end

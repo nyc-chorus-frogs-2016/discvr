@@ -1,0 +1,6 @@
+<h1>Things we ♥ </h1>
+<% @categories.each do |category| %>
+
+<li><%= link_to category.name, categories_path %></li>
+
+<%end%>

@@ -1,6 +1,6 @@
 <%= form_for @user do |f| %>
-<fieldset>
-  <legend>Please Register</legend>
+
+  <legend>Register</legend>
   <div>
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -17,13 +17,12 @@
   </div>
 
   <div>
-    <%= f.label :password_confirmation %>
+    <%= f.label :confirm_password %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div>
     <%= f.submit %>
   </div>
-</fieldset>
 <% end %>
 
 <% if @user.errors.any? %>

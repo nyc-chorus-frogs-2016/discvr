@@ -1,5 +1,10 @@
 class ArticlesController < ApplicationController
 
+  def index
+    @articles = Article.all
+    @category = Category.find_by(id: params[:id])
+  end
+
   def show
     @article = Article.find_by(id: params[:id])
   end

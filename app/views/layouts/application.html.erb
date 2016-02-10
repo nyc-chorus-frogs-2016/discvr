@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Discly</title>
+  <title>discly -- discuss and discover</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag    'normalize', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<header>
+  <%= link_to "discly", root_path, id: 'header' %>
+  <%= link_to 'CATEGORIES', categories_path%>
+    <div class="welcome-bar, right">
+      <% if current_user %>
+         Welcome <%= current_user.username %>
+         <%= link_to 'Log out', session_path, method: :delete%>
+      <% else %>
+         <%= link_to 'Log in', new_session_path%>
+      <% end %>
+    </div>
+</header>
+
 <%= yield %>
 
+<footer>
+<p class= "right"> © 2016 Discly </p>
+</footer>
 </body>
 </html>
