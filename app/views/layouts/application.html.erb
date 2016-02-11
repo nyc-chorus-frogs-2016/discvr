@@ -12,6 +12,7 @@
 <body>
 
 <header>
+  <nav>
   <%= link_to "discly", root_path, id: 'header' %>
   <%= link_to 'CATEGORIES', categories_path%>
     <div class="welcome-bar, right">
@@ -22,6 +23,7 @@
          <%= link_to 'Log in', new_session_path%>
       <% end %>
     </div>
+  </nav>
 </header>
 
 <%= yield %>

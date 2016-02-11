@@ -13,3 +13,11 @@ Category.create!(name:'Running')
 Category.create!(name:'Skiing')
 Category.create!(name:'Diving')
 Category.create!(name:'Sushi')
+
+
+Article.create!(name:'Chocolate is great and this is why')
+Article.create!(name:'Tech you Tech me')
+Article.create!(name:'Running towards... more running')
+Article.create!(name:'Skiing is life. Life is skiing.')
+Article.create!(name:'Diving down into the depths of everything good')
+Article.create!(name:'Sushi is the reason I live')

@@ -1,16 +1,10 @@
 <h1><%=@category.name%></h1>
-<% @articles.each do |articles| %>
+<% @articles.each do |article| %>
 
-
-<li><%= link_to article.name, article_path(article) %></li>
-
+<li><%= link_to article.name, category_articles_path %></li>
 
 <%end%>
 
-<h1>Submit an Article</h1>
-<%= form_for :article, :html => {:id => "article-form"} do |f| %>
-  <%= f.label :name %>
-  <%= f.text_area :name %>
+<h3><%= link_to 'Submit an Article', new_category_article_path %></h3>
 
-  <%= f.submit 'Submit', class: 'button'%>
-  <% end %>
+

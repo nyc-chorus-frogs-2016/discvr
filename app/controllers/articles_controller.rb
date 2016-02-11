@@ -2,11 +2,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-    @category = Category.find_by(id: params[:id])
-  end
-
-  def show
-    @article = Article.find_by(id: params[:id])
+    @category = Category.where(id: params[:id])
   end
 
   def new
@@ -15,6 +11,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
+  end
+
+  def show
+    @article = Article.find_by(id: params[:id])
   end
 
   private

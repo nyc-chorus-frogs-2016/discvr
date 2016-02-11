@@ -1,0 +1,7 @@
+<h2>Submit something awesome</h2>
+<%= form_for :article, :html => {:id => "article-form"} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+
+  <%= f.submit 'Submit', class: 'button'%>
+  <% end %>

@@ -1,6 +1,6 @@
 <%= form_tag session_path do %>
-
-  <h2>Log in</h2>
+<fieldset>
+  <legend>Log in</legend>
   <div>
     <%= label_tag :email %>
     <%= text_field_tag :email %>
@@ -11,10 +11,8 @@
     <%= password_field_tag :password %>
   </div>
   <div>
-    <%= submit_tag 'Log in', class: 'button'%>
+    <%= submit_tag 'Log in' %>
   </div>
-
+</fieldset>
 
 <% end %>
-
-<%= link_to 'No account? Sign up', new_user_path %>
